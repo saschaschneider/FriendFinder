@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+
+<head>
+    <title>FriendFinder - The first step</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="assets/css/style.css"> -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <div class="text-center">
+            </div>
+            <div class="text-justify">
+                <h2><span class="glyphicon glyphicon-list-alt"></span> Survey</h2>
+            </div>
+            <hr>
+            <p><b>Directions:</b> Just go and try it!</p>
+            <hr>
+            <form id="survey-form" role="form" data-toggle="validator">
+                <div class="messages"></div>
+                <div class="form-group">
+                    <label id="name-label" for="name">Name *</label>
+                    <input class="form-control" type="text" name="name" id="name" placeholder="German Gentleman">
+                </div>
+                <div class="form-group">
+                    <label for="image">Link to Photo Image *</label>
+                    <input class="form-control" type="text" name="photo" id="photo" placeholder="http://www.sendmeyourimage.image.img">
+                </div>
+                <hr>
+                <div class="form-group">
+                    <div class="radio Q1">
+                        <p><b>1.&nbsp;&nbsp; Your mind is always buzzing with unexplored ideas and plans</b>
+                            <br>
+                        </p>
+                        <b>Strongly Disagree &nbsp;&nbsp;</b>
+                        <label>
+                            <input type="radio" name="q1" id="q1-1" value="1" required="required">1</label>
+                        <label>
+                            <input type="radio" name="q1" id="q1-2" value="2" required="required">2</label>
+                        <label>
+                            <input type="radio" name="q1" id="q1-3" value="3" required="required">3</label>
+                        <label>
+                            <input type="radio" name="q1" id="q1-4" value="4" required="required">4</label>
+                        <label>
+                            <input type="radio" name="q1" id="q1-5" value="5" required="required">5</label>
+                        <b>&nbsp;&nbsp; Strongly Agree</b>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="radio Q2">
+                        <p><b>2.&nbsp;&nbsp; Generally speaking, you rely more on your experience than your imagination.</b>
+                            <br>
+                        </p>
+                        <b>Strongly Disagree &nbsp;&nbsp;</b>
+                        <label>
+                            <input type="radio" name="q2" id="q2-1" value="1" required="required">1</label>
+                        <label>
+                            <input type="radio" name="q2" id="q2-2" value="2" required="required">2</label>
+                        <label>
+                            <input type="radio" name="q2" id="q2-3" value="3" required="required">3</label>
+                        <label>
+                            <input type="radio" name="q2" id="q2-4" class="q2" value="4" required="required">4</label>
+                        <label>
+                            <input type="radio" name="q2" id="q2-5" class="q2" value="5" required="required">5</label>
+                        <b>&nbsp;&nbsp; Strongly Agree</b>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="radio Q3">
+                        <p><b>3.&nbsp;&nbsp; You are fast?</b>
+                            <br>
+                        </p>
+                        <b>Strongly Disagree &nbsp;&nbsp;</b>
+                        <label>
+                            <input type="radio" name="q3" id="q3-1" value="1" required="required">1</label>
+                        <label>
+                            <input type="radio" name="q3" id="q3-2" value="2" required="required">2</label>
+                        <label>
+                            <input type="radio" name="q3" id="q3-3" value="3" required="required">3</label>
+                        <label>
+                            <input type="radio" name="q3" id="q3-4" value="4" required="required">4</label>
+                        <label>
+                            <input type="radio" name="q3" id="q3-5" value="5" required="required">5</label>
+                        <b>&nbsp;&nbsp; Strongly Agree</b>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="radio Q4">
+                        <p><b>4.&nbsp;&nbsp; You like to go out?</b>
+                            <br>
+                        </p>
+                        <b>Strongly Disagree &nbsp;&nbsp;</b>
+                        <label>
+                            <input type="radio" name="q4" id="q4-1" value="1" required="required">1</label>
+                        <label>
+                            <input type="radio" name="q4" id="q4-2" value="2" required="required">2</label>
+                        <label>
+                            <input type="radio" name="q4" id="q4-3" value="3" required="required">3</label>
+                        <label>
+                            <input type="radio" name="q4" id="q4-4" value="4" required="required">4</label>
+                        <label>
+                            <input type="radio" name="q4" id="q4-5" value="5" required="required">5</label>
+                        <b>&nbsp;&nbsp; Strongly Agree</b>
+                    </div>
+                </div>
+                <div class="form-group Q5">
+                    <div class="radio">
+                        <p><b>5.&nbsp;&nbsp; You are original, you come up with new ideas</b>
+                            <br>
+                        </p>
+                        <b>Strongly Disagree &nbsp;&nbsp;</b>
+                        <label>
+                            <input type="radio" name="q5" id="q5-1" value="1" required="required">1</label>
+                        <label>
+                            <input type="radio" name="q5" id="q5-2" value="2" required="required">2</label>
+                        <label>
+                            <input type="radio" name="q5" id="q5-3" value="3" required="required">3</label>
+                        <label>
+                            <input type="radio" name="q5" id="q5-4" value="4" required="required">4</label>
+                        <label>
+                            <input type="radio" name="q5" id="q5-5" value="5" required="required">5</label>
+                        <b>&nbsp;&nbsp; Strongly Agree</b>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="radio Q6">
+                        <p><b>6.&nbsp;&nbsp; You are outgoing?</b>
+                            <br>
+                        </p>
+                        <b>Strongly Disagree &nbsp;&nbsp;</b>
+                        <label>
+                            <input type="radio" name="q6" id="q6-1" value="1" required="required">1</label>
+                        <label>
+                            <input type="radio" name="q6" id="q6-2" value="2" required="required">2</label>
+                        <label>
+                            <input type="radio" name="q6" id="q6-3" value="3" required="required">3</label>
+                        <label>
+                            <input type="radio" name="q6" id="q6-4" value="4" required="required">4</label>
+                        <label>
+                            <input type="radio" name="q6" id="q6-5" value="5" required="required">5</label>
+                        <b>&nbsp;&nbsp; Strongly Agree</b>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="radio Q7">
+                        <p><b>7.&nbsp;&nbsp; You are somewhat selfish?</b>
+                            <br>
+                        </p>
+                        <b>Strongly Disagree &nbsp;&nbsp;</b>
+                        <label>
+                            <input type="radio" name="q7" id="q7-1" value="1" required="required">1</label>
+                        <label>
+                            <input type="radio" name="q7" id="q7-2" value="2" required="required">2</label>
+                        <label>
+                            <input type="radio" name="q7" id="q7-3" value="3" required="required">3</label>
+                        <label>
+                            <input type="radio" name="q7" id="q7-4" value="4" required="required">4</label>
+                        <label>
+                            <input type="radio" name="q7" id="q7-5" value="5" required="required">5</label>
+                        <b>&nbsp;&nbsp; Strongly Agree</b>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="radio Q8">
+                        <p><b>8.&nbsp;&nbsp; You are somewhat careless</b>
+                            <br>
+                        </p>
+                        <b>Strongly Disagree &nbsp;&nbsp;</b>
+                        <label>
+                            <input type="radio" name="q8" id="q8-1" value="1" required="required">1</label>
+                        <label>
+                            <input type="radio" name="q8" id="q8-2" value="2" required="required">2</label>
+                        <label>
+                            <input type="radio" name="q8" id="q8-3" value="3" required="required">3</label>
+                        <label>
+                            <input type="radio" name="q8" id="q8-4" value="4" required="required">4</label>
+                        <label>
+                            <input type="radio" name="q8" id="q8-5" value="5" required="required">5</label>
+                        <b>&nbsp;&nbsp; Strongly Agree</b>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="radio Q9">
+                        <p><b>9.&nbsp;&nbsp; You handle stress well?</b>
+                            <br>
+                        </p>
+                        <b>Strongly Disagree &nbsp;&nbsp;</b>
+                        <label>
+                            <input type="radio" name="q9" id="q9-1" value="1" required="required">1</label>
+                        <label>
+                            <input type="radio" name="q9" id="q9-2" value="2" required="required">2</label>
+                        <label>
+                            <input type="radio" name="q9" id="q9-3" value="3" required="required">3</label>
+                        <label>
+                            <input type="radio" name="q9" id="q9-4" value="4" required="required">4</label>
+                        <label>
+                            <input type="radio" name="q9" id="q9-5" value="5" required="required">5</label>
+                        <b>&nbsp;&nbsp; Strongly Agree</b>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="radio Q10">
+                        <p><b>10.&nbsp;&nbsp; You are a curious person?</b>
+                            <br>
+                        </p>
+                        <b>Strongly Disagree &nbsp;&nbsp;</b>
+                        <label>
+                            <input type="radio" name="q10" id="q10-1" value="1" required="required">1</label>
+                        <label>
+                            <input type="radio" name="q10" id="q10-2" value="2" required="required">2</label>
+                        <label>
+                            <input type="radio" name="q10" id="q10-3" value="3" required="required">3</label>
+                        <label>
+                            <input type="radio" name="q10" id="q10-4" value="4" required="required">4</label>
+                        <label>
+                            <input type="radio" name="q10" id="q10-5" value="5" required="required">5</label>
+                        <b>&nbsp;&nbsp; Strongly Agree</b>
+                    </div>
+                </div>
+                <br>
+                <p>* In order to find a real friend, you have to answer all questions!</p>
+                <br>
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary btn-lg btn-block" id="submitBtn"><i class="fa fa-check-circle" aria-hidden="true"></i> Submit
+                </button>
+                <hr>
+                <div class="api">
+                    <a href="/api/friends">API Friends List</a>
+                </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div id="resultsModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h2 class="modal-title"><strong>Friend Finder: Best Match</strong></h2>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h2 id="yourName"></h2>
+                            <img id="yourImg" src="" alt="">
+                        </div>
+                        <div class="col-md-6">
+                            <h2 id="matchName"></h2>
+                            <img id="matchImg" src="" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p id="demo"></p>
+    <script src="assets/js/header.js"></script>
+    <script src="assets/js/validator.js"></script>
+    <script src="assets/js/survey.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+<!-- Grabs information and sends it to server -->
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#submitBtn").on("click", function() {
+
+             //form validation
+        function validateForm() {
+            var isValid = true;
+            $('.validate').each(function() {
+                if ($(this).val() === '') {
+                    isValid = false;
+                }
+            });
+            $('.browser-default').each(function() {
+                if ($(this).val() === "") {
+                    isValid = false;
+                }
+            });
+            return isValid;
+        }
+        //if everything is filled
+        if (validateForm() == true) {
+
+            var url = window.location.href;
+            var urlLength = url.length;
+            console.log("Page path is: " + url + " length = " + urlLength);
+
+            var q1 = url.substr(urlLength - 47, 1);
+            var q2 = url.substr(urlLength - 42, 1);
+            var q3 = url.substr(urlLength - 37, 1);
+            var q4 = url.substr(urlLength - 32, 1);
+            var q5 = url.substr(urlLength - 27, 1);
+            var q6 = url.substr(urlLength - 22, 1);
+            var q7 = url.substr(urlLength - 17, 1);
+            var q8 = url.substr(urlLength - 12, 1);
+            var q9 = url.substr(urlLength - 7, 1);
+            var q10 = url.substr(urlLength - 1, 1);
+            var image = $("#photo").val();
+            var name = $("#name").val();
+
+            console.log("Q1 = " + q1);
+            //creates a new friend from the values submitted
+
+            var newFriend = {
+                name: $('#name').val().trim(),
+                profilePic: $('#photo').val().trim(),
+                scores: [
+                    q1,
+                    $(".Q1").val(),
+                    q3,
+                    q4,
+                    q5,
+                    q6,
+                    q7,
+                    q8,
+                    q9,
+                    q10
+                ]
+            };
+            //Grabs current URL of website
+            var currentURL = window.location.origin;
+            console.log("current URL" + currentURL);
+
+            //AJAX posts the data to friends API.
+            $.post(currentURL + "/api/friends", newFriend, function(data) {
+                //Grab the result from the AJAX post so that the best match's name and photo are displayed.
+                $("#name").text(data.name);
+                $("#photo").attr("src", data.profilePic);
+            });
+            // Show the modal with the best match
+            $('.modal').modal();
+            //clear form after submission
+            $('#name').val("");
+            $('#photo').val("");
+            $('#q' + i + '-1').val(""),
+                $('#q' + i + '-2').val(""),
+                $('#q' + i + '-3').val(""),
+                $('#q' + i + '-4').val(""),
+                $('#q' + i + '-5').val(""),
+                $('#q' + i + '-6').val(""),
+                $('#q' + i + '-7').val(""),
+                $('#q' + i + '-8').val(""),
+                $('#q' + i + '-9').val(""),
+                $('#q' + i + '-10').val("")
+        } else {
+            alert("Please fill out ALL fields before submitting survey!")
+        }
+        // return false;
+    });
+});
+</script>
+</body>
+
+</html>
